@@ -1,0 +1,382 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+background:#E1E0E1; 
+font-family: 'Ubuntu Condensed', sans-serif;
+background:#FFF;
+}
+
+#container {  
+width:100%; 
+min-width:300px;
+margin:0 auto; 
+position:relative;
+}
+
+#barrefixe{
+height:50px;
+position:fixed; 
+width:100%; 
+background-color:black; 
+color:#FFF;
+z-index:200;
+}
+
+#devis, #adresse, #fax, img[src="images/telephone.png"], #navigation, #container footer{
+	display:none;
+}		  
+
+#navigation-Smart {   
+z-index:100;
+text-align:right; 
+margin-top:-25px;
+}
+#navigation-Smart li {   
+	list-style:none;
+}
+#navigation-Smart img {
+	display: inline-block;
+	line-height: 30px;
+	margin-right:25px;
+}
+
+
+#menu-smartphone {
+	background:#333;
+	text-align:left;
+	left: -999em;
+}
+
+#menu-smartphone li {
+	float:right;
+	width:45%;
+	min-width:150px;
+	background:#333;
+	list-style:none;
+	padding:3% 5%;
+}
+
+#menu-smartphone li a:hover {
+text-decoration:underline;
+}
+#navigation-Smart img {
+	padding-top:20px;
+	padding-bottom:10px;
+} 
+#navigation-Smart li:hover ul, #navigation-Smart li li:hover ul, #navigation-Smart li.sfhover ul, #navigation-Smart li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+#navigation-Smart>li:hover {
+	background:rgba(102,102,102,0.4);
+}
+
+
+#barrefixe ul {   
+position:relative;
+}
+
+img[title="logo sart Sorais"] {
+	width:150px;
+	margin:50px auto 0 auto;
+	display:block;
+}
+
+#tel {
+	font-size:30px;
+	color:#79A614;
+	padding-bottom:10px;
+	text-align:center;
+}
+
+
+
+header a {
+	text-decoration:none;
+	color:#FFF;
+}
+
+
+.rubrique1 {
+	background: #C30  url(../images/fleche.png) no-repeat 95%;
+	padding-top:15px;
+	color: #FFF;
+	height: 5em;
+	padding-left: 5%;
+	border-bottom: thin dotted #FFF;
+}
+
+.rubrique2 {
+	background: #630  url(../images/fleche.png) no-repeat 95%;
+	padding-top:15px;
+	color: #FFF;
+	height: 5em;
+	padding-left: 5%;
+	border-bottom: thin dotted #FFF;
+}
+
+.rubrique3 {
+	background: #79A614 url(../images/fleche.png) no-repeat 95%;
+	padding-top:15px;
+	color: #FFF;
+	height: 5em;
+	padding-left: 5%;
+	border-bottom: thin dotted #FFF;
+}
+
+.rubrique1:hover, .rubrique2:hover, .rubrique3:hover {
+background:rgba(102,102,102,0.7)  url(../images/fleche.png) no-repeat 95%;
+}
+.article a[href="iframe-definition.html"] {
+	display:none;
+}
+
+body #container .fancybox-wrap .fancybox-desktop .fancybox-type-iframe .fancybox-opened {
+	width:500%;
+}
+
+<!------- page presentation--------->
+
+.presentation {
+display:inline-block;
+height:480px; 
+padding-top:2%;
+margin-bottom:2%;
+position:relative;
+}
+
+.presentation div {
+width:90%;
+padding:0 5%;
+float:left;
+}
+
+.presentation div p {
+font-size:14px;
+}
+.presentation div h5 {
+font-size:20px;
+color:#DA2513;
+margin-bottom:10px;
+}
+
+.presentation img{
+display:none;
+}
+
+.engagements {
+font-size:16px;
+width:90%;
+position:relative;
+bottom:0;
+left:-0.5%;
+background-color:#DA2513;
+color:#FFF;
+padding:5px 20px 10px 20px;
+list-style:none;
+}
+
+.engagements li:nth-child(1) { 
+font-size:20px;
+margin-bottom:10px;
+}
+
+<!------- page maisons neuves--------->
+
+.neuf {
+	width:100%;
+	height:200px;
+	position:relative;
+	margin:auto;
+}
+
+.text {
+z-index:150;
+background-color:#FFF;
+position:relative;
+}
+
+.text ul {
+	margin-left:70px;
+}
+
+h3 { 
+font-size:20px;
+color:#FFF;
+padding:5px 25px 5px 70px;
+height:50px;
+font-weight:normal;
+margin-bottom:30px;
+}
+
+h3:hover {
+color:#CCC;
+}
+
+.left-ribbon {
+display: block;
+position:relative;
+top: 10px;
+left: -20px;
+width: 105%;
+background:#C30;
+box-shadow:1px 1px 1px 1px #(306,306,306,0.4);
+}
+ 
+.left-ribbon:before, .left-ribbon:after {
+content: '';
+display: block;
+position: absolute;
+border-style: solid;
+}
+ 
+.left-ribbon:before {
+display: none;
+right: -25px;
+top: 50px;
+border-width: 10px;
+border-color:  transparent transparent #603 #603;
+}
+ 
+.left-ribbon:after {
+display: block;
+left: 0px;
+top: 60px;
+border-width: 10px;
+border-color: #603 #603 transparent transparent ;
+}
+ 
+
+.bx-wrapper {
+	width:100%;
+	min-width:100%;
+	padding: 0;
+	*zoom: 1;
+	float:left;
+	position:relative;
+	top:10px;
+	right:0;
+}
+
+#container .bx-wrapper .bx-prev {
+	left: 2%;
+	background: url(../images/controls.png)no-repeat 0 -32px;
+}
+
+#container .bx-pager-item {
+	text-align:center;
+}
+
+<!------- Rénovations--------->
+
+.renovation {
+	width:100%;
+	height:200px;
+	background:#CCC;
+	position:relative;
+	margin:auto;
+}
+
+.h3Renov {
+	line-height: 50px;
+}
+
+.left-ribbon-renovation {
+display: block;
+position:relative;
+top: 10px;
+left: -20px;
+width: 105%;
+background:#630;
+box-shadow:1px 1px 1px 1px #(306,306,306,0.4);
+}
+ 
+.left-ribbon-renovation:before, .left-ribbon-renovation:after {
+content: '';
+display: block;
+position: absolute;
+border-style: solid;
+}
+ 
+.left-ribbon-renovation:before {
+display: none;
+right: -25px;
+top: 50px;
+border-width: 10px;
+border-color:  transparent transparent #303 #303;
+}
+ 
+.left-ribbon-renovation:after {
+display: block;
+left: 0px;
+top: 60px;
+border-width: 10px;
+border-color: #303 #303 transparent transparent ;
+}
+
+<!------- Éco-construction--------->
+.eco-construction {
+	width:100%;
+	height:200px;
+	background:#CCC;
+	position:relative;
+	margin:auto;
+}
+
+.left-ribbon-eco {
+display: block;
+position:relative;
+top: 10px;
+left: -20px;
+width: 105%;
+background:#79A614;
+box-shadow:1px 1px 1px 1px #(306,306,306,0.4);
+}
+ 
+.left-ribbon-eco:before, .left-ribbon-eco:after {
+content: '';
+display: block;
+position: absolute;
+border-style: solid;
+}
+ 
+.left-ribbon-eco:before {
+display: none;
+right: -25px;
+top: 50px;
+border-width: 10px;
+border-color:  transparent transparent #40525a #40525a;
+}
+ 
+.left-ribbon-eco:after {
+display: block;
+left: 0px;
+top: 60px;
+border-width: 10px;
+border-color: #40525a #40525a transparent transparent ;
+}
+
+
+/*------------Réferences---------------*/
+.neuf p{
+	padding:5px 0px 5px 40px;
+}
+/*------------Mentions légales---------------*/
+.mentions-legales {
+width:86%; 
+margin:0 auto;
+padding:2%;
+overflow:hidden;
+position:relative;
+font-size:15px;
+}
+/*-------------page contact----------*/
+.contact {
+display:inline-block;
+width:100%; 
+background-color:#FFF;
+position:relative;
+padding:3%;
+}
