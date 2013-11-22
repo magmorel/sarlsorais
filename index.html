@@ -9,19 +9,17 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<meta content="width=device-width" name="viewport">
+<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
 <meta name="description" content="Entreprise de maçonnerie dans le bassin rennais. Construction, rénovation, agrandissement de maison individuelle et petit collectif.">
 
 <link rel="SHORTCUT ICON" href="images/picto-logo.png"> 
 
-<!--lien vers une feuille de styles de reset -->
-<link rel="stylesheet" href="css/jquery.bxslider.css" />
+<!--lien vers feuilles de styles-->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
 <link rel="stylesheet" href="css/styles.css"/>
 
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-<!-- Add fancyBox main JS and CSS files -->
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
 </head>
 
 
@@ -31,7 +29,7 @@
 		   <div id="barrefixe">&nbsp;
             <ul id="navigation-Smart">
         	<li><a href="#"><img src="images/bouton-bar.png"/></a>
-            	<ul id="menu-smartphone">
+          	<ul id="menu-smartphone">
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="presentation.html">Présentation</a></li>
                         <li><a class="various fancybox.iframe" href="https://maps.google.fr/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=79+Boulevard+de+D%C3%A9zerseul,+Cesson-S%C3%A9vign%C3%A9&amp;aq=0&amp;oq=79,+b&amp;sll=48.128704,-1.595249&amp;sspn=0.011157,0.015256&amp;ie=UTF8&amp;hq=&amp;hnear=79+Boulevard+de+D%C3%A9zerseul,+35510+Cesson-S%C3%A9vign%C3%A9,+Ille-et-Vilaine,+Bretagne&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed">Nous situer</a></li>
@@ -115,9 +113,9 @@
 </div>
 
 
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 
 
 <!-- Add fancyBox main JS -->
@@ -149,8 +147,14 @@ $(document).ready(function() {
 });
 
 </script>
+<script>
+	$('.carousel').carousel({
+  interval: 2000
+})
+$('#myCarousel').on('slide.bs.carousel', function () {
+  // do something…
+})
+</script>
 
-
-  
 </body>
 </html>

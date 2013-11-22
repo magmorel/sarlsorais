@@ -9,19 +9,17 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<meta content="width=device-width" name="viewport">
+<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
 <meta name="description" content="Nos travaux extérieurs et notre engagement sur l'utilisation d'éco-matériaux">
 
 <link rel="SHORTCUT ICON" href="images/picto-logo.png"> 
 
-<!--lien vers une feuille de styles de reset -->
-<link rel="stylesheet" href="css/jquery.bxslider.css" />
+<!--lien vers feuilles de styles-->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
 <link rel="stylesheet" href="css/styles.css"/>
 
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-<!-- Add fancyBox main JS and CSS files -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
 </head>
 
 
@@ -103,20 +101,61 @@
          </ul>
        </div>
        
-       <div id="galerie">
-        <ul class="bxslider">
-          <li><img src="images/Photos/Ext-Eco/Ext1.jpg" /></li>
-          <li><img src="images/Photos/Ext-Eco/Ext2.jpg" /></li>
-          <li><img src="images/Photos/Ext-Eco/Ext3.jpg" /></li>
-          <li><img src="images/Photos/Ext-Eco/Ext4.jpg"/></li>
-          <li><img src="images/Photos/Ext-Eco/Ext5.jpg" /></li>
-          <li><img src="images/Photos/Ext-Eco/Ext6.jpg"/></li>
-		  <li><img src="images/Photos/Ext-Eco/Ext7.jpg"/></li>
-          <li><img src="images/Photos/Ext-Eco/Ext8.jpg"/></li>
-          <li><img src="images/Photos/Ext-Eco/Ext9.jpg"/></li>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="8"></li>
 
-        </ul>
-        <div id="galerie">
+      </ol>
+
+  <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/Photos/Ext-Eco/Ext1.jpg" alt="photo1">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext2.jpg" alt="photo2">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext3.jpg" alt="photo3">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext4.jpg" alt="photo4">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext5.jpg" alt="photo5">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext6.jpg" alt="photo6">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext7.jpg" alt="photo7">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext8.jpg" alt="photo8">
+        </div>
+        <div class="item">
+          <img src="images/Photos/Ext-Eco/Ext9.jpg" alt="photo9">
+        </div>
+
+    </div>
+
+  <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+</div>
 
 </section>
     
@@ -139,9 +178,9 @@
 </div>
 
 
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 
 
 <!-- Add fancyBox main JS -->
@@ -162,19 +201,19 @@ $(document).ready(function() {
 		closeEffect	: 'none'
 	});
 
-$('.fancybox').fancybox();
-
-$('.bxslider').bxSlider({
-  infiniteLoop: false,
-  hideControlOnEnd: true,
-  captions: true
-});
+	$('.fancybox').fancybox();
 
 });
 
 </script>
+<script>
+/*	$('.carousel').carousel({
+  interval: 2000
+})
+$('#myCarousel').on('slide.bs.carousel', function () {
+  // do something…
+})*/
+</script>
 
-
-  
 </body>
 </html>

@@ -17,7 +17,6 @@ a img {border: none;margin:0; padding:0;}
 header, section, footer, aside, nav, article, figure {display: block;}
 a {text-decoration:none;}
 blockquote, q {quotes: none;}
-
 blockquote:before, blockquote:after,
 q:before, q:after { content: ''; content: none;} 
 /*annule les guillemets pa défaut des navigateurs*/
@@ -72,8 +71,10 @@ padding-top:10px;
 min-width:100px;
 z-index:200;
 }		
-
-
+a:hover{
+	color:#FFF;
+	text-decoration:none;
+	}
 header {
 background-color:#FFF;
 position:relative;
@@ -335,18 +336,19 @@ position:relative;
 float:left;
 }
 h3 { 
-font-size:20px;
+font-size:18px;
 color:#FFF;
-padding:5px 25px 5px 60px;
-height:50px;
+padding:5px 25px 0px 60px;
+height:60px;
 font-weight:normal;
 margin-bottom:30px;
 }
 .h3Neuf {
-	line-height: 50px;
+	line-height:50px;
 }
 h3:hover {
 color:#CCC;
+text-decoration:none;
 }
 .left-ribbon {
 display: block;
@@ -366,7 +368,7 @@ border-style: solid;
 .left-ribbon:before {
 display: none;
 right: -25px;
-top: 50px;
+top: 60px;
 border-width: 10px;
 border-color:  transparent transparent #603 #603;
 }
@@ -377,16 +379,19 @@ top: 60px;
 border-width: 10px;
 border-color: #603 #603 transparent transparent ;
 }
+
 .text li {
 margin-left:70px;
 font-size:16px;
 line-height:25px;
 position:relative;
 }
-#container #galerie {
-	float:right;
-	margin-right:5px;
-	width:64%;
+.carousel {
+	position: relative;
+	float: right;
+	width: 64%;
+	max-width: 600px;
+	top:0;
 }
 
 /*--------page rénovation----------*/
@@ -418,7 +423,7 @@ border-style: solid;
 .left-ribbon-renovation:before {
 display: none;
 right: -25px;
-top: 50px;
+top: 60px;
 border-width: 10px;
 border-color:  transparent transparent #303 #303;
 }
@@ -464,7 +469,7 @@ border-style: solid;
 .left-ribbon-eco:before {
 display: none;
 right: -25px;
-top: 50px;
+top: 60px;
 border-width: 10px;
 border-color:  transparent transparent #40525a #40525a;
 }
@@ -487,7 +492,7 @@ position:relative;
 }
 .presentation div {
 width:45%;
-padding:5px 10px 30px 30px;
+padding:15px 10px 30px 30px;
 float:left;
 }
 .presentation div p {
@@ -542,7 +547,18 @@ margin-bottom:10px;
 	font-size:14px;
 	line-height:18px;
 }
-
+.carousel-caption{
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+	left: 20px;
+	z-index: 10;
+	padding: 0px;
+	padding: 0px;
+}
+.carousel-indicators {
+	bottom: 10px;
+}
 /*-------------page mentions légales----------*/
 .mentions-legales {
 width:80%; 
@@ -581,11 +597,21 @@ padding:10%;
 margin-bottom:2%;
 }
 
+
 /**************************
-* IPADS (PAYSAGES)  .......and (orientation: landscape)
+* IPADS (PAYSAGES)
 **************************/
 @media only screen
-and (max-width: 1024px) {
+and (max-width: 1024px)
+and (orientation: landscape) {
+#container {  
+width:85%; 
+min-width:770px;
+max-width:915px;
+margin:0 auto; 
+position:relative;
+border-radius:10px;
+}
 .article div {
 width:33%;
 }
@@ -594,13 +620,50 @@ width:33%;
 position:absolute;
 margin-left:0.5%;
 }
+#tel a, #fax a {
+	color:#000;
+}
+
+.presentation img[src="images/presentation.jpg"], .presentation img[src="images/presentation2.jpg"]{
+width:48%;
+float:right;
+}
+img[src="images/presentation.jpg"] {
+	margin-top:120px;
+}
+.engagements {
+font-size:16px;
+width:43%;
+float:right;
+background-color:#DA2513;
+color:#FFF;
+padding:2.5%;
+margin:0;
+list-style:none;
+}
+
+.engagements li:nth-child(1) { 
+font-size:20px;
+margin-bottom:10px;
+}
+
+.carousel-caption{
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
+	left: 10px;
+	z-index: 10;
+	padding: 0px;
+	padding: 0px;
+}
 }
 
 /**************************
-* IPADS (PORTRAIT) ......and (orientation: portrait) 
+* IPADS (PORTRAIT) 
 **************************/
 @media only screen
-and (max-width: 767px) {
+and (max-width: 768px)
+and (orientation: portrait) {
 #container {  
 width:90%; 
 min-width:300px;
@@ -628,9 +691,12 @@ z-index:500;
 #barrefixe ul{
 	display:block;
 }
-#navigation-Smart {   
-text-align:right; 
+#tel a, #fax a {
+	color:#000;
+}
+#navigation-Smart ul {   
 margin-top:0px;
+float:right;
 }
 #navigation-Smart li {   
 	list-style:none;
@@ -642,19 +708,17 @@ margin-top:0px;
 	z-index:600;
 }
 #menu-smartphone {
-	background:#333;
-	text-align:left;
+	background: #333;
+	text-align: left;
 	left: -999em;
 }
 
 #menu-smartphone li {
-	float:right;
 	width:30%;
 	min-width:150px;
 	background:#333;
 	list-style:none;
-	padding:10px 5%;
-	margin-left:20%;
+	padding:10%;
 }
 #menu-smartphone a {
 	color:#FFF;
@@ -706,11 +770,11 @@ margin-top:30px;
 margin-bottom:10px;
 position:relative;
 overflow:visible;
-min-height:600px;
+min-height:750px;
 }
 .article div {
 width:100%;
-height:200px;
+height:250px;
 box-shadow:1px 1px 2px 1px gray;
 border-radius:0;
 }
@@ -730,14 +794,14 @@ background-repeat:no-repeat;
 }
 .rubrique2 {
 background-image:url(../images/spriteTablette.png);
-background-position:0px -200px;
+background-position:0px -250px;
 background-repeat:no-repeat;
 position:relative;
 margin:0;
 }
 .rubrique3 {
 background-image:url(../images/spriteTablette.png);
-background-position:0px -400px;
+background-position:0px -500px;
 background-repeat:no-repeat;
 position:relative;
 right:0;
@@ -748,11 +812,11 @@ background-position:-700px 0px;
 }
 .article .rubrique2:hover {
 background-image:url(../images/spriteTablette.png);
-background-position:-700px -200px;
+background-position:-700px -250px;
 }
 .article .rubrique3:hover {
 background-image:url(../images/spriteTablette.png);
-background-position:-700px -400px;
+background-position:-700px -500px;
 }
 .article a[href="iframe-definition.html"] {
 	position:absolute;
@@ -771,17 +835,17 @@ background-position:-700px -400px;
 	background:rgba(102,102,102,0.9);
 }
 <!------- page presentation--------->
-
 .presentation {
-display:inline-block;
-padding-top:2%;
-padding-bottom:2%;
-position:relative;
+display: inline-block;
+width: 100%;
+overflow: hidden;
+padding-top: 10%;
+margin-bottom: 10%;
+background-color: #FFF;
+position: relative;
 }
-
 .presentation div {
 width:90%;
-padding:0 5%;
 float:left;
 }
 
@@ -822,6 +886,7 @@ display:block;
 }
 .text {
 	width:100%;
+	margin-bottom:20px;
 }
 .left-ribbon {
 display: block;
@@ -835,14 +900,12 @@ box-shadow:1px 1px 1px 1px #(306,306,306,0.4);
 .text ul {
 	margin-left:20px;
 }
-#galerie {
-	width:100%;
-	min-width:100%;
-	padding: 0;
-	margin:0;
-	*zoom: 1;
-	position:relative;
-	top:10px;
+.carousel {
+	position: relative;
+	float: left;
+	width: 100%;
+	max-width: 600px;
+	top:0;
 }
 }
 /**************************
@@ -898,8 +961,20 @@ img[title="logo sart Sorais"] {
 	width:95%;
 	height:100px;
 }
+h2 {
+color:#FFF;
+display:inline-block;
+font-size:18px;
+padding-left:5%;
+margin-top:0;
+width:95%;
+height:35px;
+line-height:18px;
+}
 .rubrique2 br, .rubrique3 br{
 	display:block;
+	margin:0;
+	padding:0;
 }
 .rubrique1 {
 	background: #C30  url(../images/fleche.png) no-repeat 95%;
@@ -938,4 +1013,18 @@ background:rgba(102,102,102,0.7)  url(../images/fleche.png) no-repeat 95%;
 .text h3 {
 	padding-left:90px;
 }
+<!------- page presentation--------->
+.presentation {
+display:inline-block;
+padding-top:2%;
+padding-bottom:2%;
+position:relative;
+}
+
+.presentation div {
+width:90%;
+padding:5% 5%;
+float:left;
+}
+
 }
