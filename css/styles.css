@@ -700,6 +700,7 @@ float:right;
 }
 #navigation-Smart li {   
 	list-style:none;
+	width:100%;
 }
 #navigation-Smart img {
 	display: inline-block;
