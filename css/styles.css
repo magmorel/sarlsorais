@@ -691,22 +691,23 @@ z-index:500;
 #barrefixe ul{
 	display:block;
 }
+#navigation-Smart{
+	text-align:right;
+}
 #tel a, #fax a {
 	color:#000;
 }
 #navigation-Smart ul {   
-margin-top:0px;
-float:right;
+	margin-top:0px;
 }
 #navigation-Smart li {   
 	list-style:none;
-	width:100%;
+	z-index:600;;
 }
 #navigation-Smart img {
 	display: inline-block;
 	line-height: 50px;
 	margin-right:50px;
-	z-index:600;
 }
 #menu-smartphone {
 	background: #333;
@@ -715,14 +716,21 @@ float:right;
 }
 
 #menu-smartphone li {
+	float:right;
 	width:30%;
 	min-width:150px;
 	background:#333;
 	list-style:none;
-	padding:10%;
+	padding:10px 5%;
+	margin-left:20%;
 }
 #menu-smartphone a {
 	color:#FFF;
+	margin-bottom:10px;
+	 position:relative;
+	 overflow:visible;
+	 min-height:600px;
+
 }
 
 #menu-smartphone a:hover {
