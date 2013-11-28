@@ -62,7 +62,12 @@ padding-left:15px;
 padding-right:15px; 
 padding-bottom:10px; 
 padding-top:10px;
-}		
+}
+#googlePlus{
+	position:absolute;
+	top:10px;
+	left:10%;
+}
 a:hover{
 	color:#FFF;
 	text-decoration:none;
@@ -651,6 +656,12 @@ height:100%;
 /*----------header-----*/
 #container div.container{
 	display:block;
+}
+.navbar-collapse {
+max-height: 500px;
+}
+.nav > li > a {
+	font-size:18px;
 }
 div.identite{
 	position:relative;
