@@ -77,33 +77,35 @@ div.identite{
 	top:20px;
 	height:160px;
 }
+
 img[title="logo sart Sorais"] {
 	position:relative;
-	top:45px;
-	margin-left:30px;
+	top:40px;
+	left:30px;
 }
 
 #adresse {
 	font-size: 16px;
-	position: absolute;
+	position: relative;
 	right: 20px;
-	top: 40px;
+	top: -50px;
 	text-align: right;
 }
 #tel {
-font-size:35px;
-position:absolute;
-right:20px;
-top:75px;
-color:black;
+	font-size:35px;
+	position:relative;
+	right:20px;
+	top: -58px;
+	color:black;
+	text-align: right;
 }
 #fax {
 	font-size: 16px;
-	position: absolute;
+	position: relative;
 	right: 20px;
-	top: 114px;
-	text-align: right;
+	top: -65px;
 	color:black;
+	text-align: right;
 }
 
 .right-ribbon {
@@ -205,9 +207,7 @@ text-decoration:underline;
 }
 /*---------corps-----*/
 .article {  
-display:inline-block;
 width:100%; 
-height:389px; 
 overflow:hidden;
 margin-top:50px;
 padding-top:10px;
@@ -242,15 +242,13 @@ background-repeat:no-repeat;
 background-image:url(../images/Sprite-couv.png);
 background-position:-450px 0px;
 background-repeat:no-repeat;
-position:absolute;
 margin-left:5%;
 }
 .rubrique3 {
 background-image:url(../images/Sprite-couv.png);
 background-position:-850px 0px;
 background-repeat:no-repeat;
-position:absolute;
-right:0;
+margin-left:5%;
 }
 .article .rubrique1:hover {
 background-image:url(../images/Sprite-couv.png);
@@ -281,34 +279,39 @@ background-position:-850px -400px;
 	background:rgba(102,102,102,0.9);
 }
 /*----------footer-----*/
-footer {
-color:black; 
-clear:both; 
-height:90px;
-}
+
 #menu-footer {
-width:90%;
-font-size:14px
+	color:black; 
+	clear:both; 
+	height:90px;
+	width:100%;
+	font-size:14px
 }
-#menu-footer th a {
+#menu-footer ul {
+	display: table;
+    width:100%;
+}
+#menu-footer li{
+	display:table-cell;
+	width:14%;
+}
+
+#menu-footer a {
 	color: black;
 	font-weight:normal;
 	text-align: center;
 	display: block;
 }
-#menu-footer th {
-	border-right:1px gray dotted;
-}
-#menu-footer th:last-child {
-	border-right:none;
-}
 #menu-footer th a:hover {
 	background:rgba(102,102,102,0.5);
 }
-img[src="images/cartefce.svg"] {
-position:absolute;
-right:15px;
-bottom:5px;
+
+#carteFrance{
+	background-image:url(../images/cartefce.svg);
+	background-repeat:no-repeat;
+	background-size:contain;
+	height:60px;
+	margin-left:20px;
 }
 /*----------page neuf-----*/
 .neuf {  
@@ -611,18 +614,15 @@ margin:0 auto;
 position:relative;
 border-radius:10px;
 }
-.article div {
-width:33%;
-}
 
-.rubrique2 {
-position:absolute;
-margin-left:0.5%;
-}
 #tel a, #fax a {
 	color:#000;
 }
-
+.article div {
+display:inline-block;
+width:33.3%;
+margin:0;
+}
 .presentation img[src="images/presentation.jpg"], .presentation img[src="images/presentation2.jpg"]{
 width:48%;
 float:right;
@@ -701,12 +701,11 @@ color:black;
 
 /*---------corps-----*/
 .article {  
-display:inline-block;
 width:100%; 
 margin-top:30px;
 margin-bottom:10px;
 position:relative;
-overflow:visible;
+overflow:hidden;
 min-height:750px;
 }
 .article div {
@@ -741,7 +740,7 @@ background-image:url(../images/spriteTablette.png);
 background-position:0px -500px;
 background-repeat:no-repeat;
 position:relative;
-right:0;
+margin:0;
 }
 .article .rubrique1:hover {
 background-image:url(../images/spriteTablette.png);
